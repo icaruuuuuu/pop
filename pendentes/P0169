@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// não entendi pqq deu tle!!!!
+void solve() {
+    double a, b, c, l, r; cin >> a >> b >> c >> l >> r;
+    int i = 0;
+    if(fmod(a/b, 1.0) == 0) {cout << r-(l-1) << endl; return;}
+    for (int x = (int) l; x <= (int) r; x++) {
+        double y = (a/b)*(double)x + c;
+        if (fmod(y, 1.0) == 0) {i++;}
+    }
+    cout << i << endl;
+
+}
+
+int main() {
+    cin.tie(0); cout.tie(0);
+    ios::sync_with_stdio(0);
+
+    int t; cin >> t; while(t--) {solve();}
+    // solve();
+    return 0;
+}
